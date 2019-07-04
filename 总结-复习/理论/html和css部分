@@ -1,0 +1,41 @@
+什么是HTML？
+HTML:Hypertext Markup Language超文本标记语言，用来制作网页。
+
+
+
+CSS相关：
+如何设置外边距？margin
+如何设置内边距？padding
+如何设置边框？border
+如何设置背景？background-color
+如何设置字体大小？font-size
+如何设置字体颜色？color
+如何设置宽高？width, height
+如何设置行高？描述行高？line-height
+如何设置圆角？border-radius
+如何设置字体粗细？font-weight  bold, bolder, normal
+如何设置文本缩进？text-indent
+如何设置前缀和后缀？::after, ::before
+
+clear: left;
+visibility: hidden;
+content: ''
+display:block;
+
+权重值特点：
+ID选择器，加100。
+类选择器、属性选择器或伪类，加10。
+元素和伪元素，加1。
+通配选择器*，加0。
+!important，加10000。
+注：多种CSS选择器一起使用时计算出来的权重值越大，CSS样式优先级越高。
+
+什么流式布局？
+流式布局，即瀑布流布局，从上到下，从左到右开始布局网页结构。指的是正常的文档流（标准流）
+
+浮动布局？
+让一个元素从正常的文档流（瀑布流）脱离出来。元素所在的空间会被下方的元素“挤”掉。浮动刚出现的时候为了做“文字环绕”，后来被开发人员“误用”来把垂直显示的元素水平排列。
+
+盒子模型：
+组成部分margin,border, padding, content，注意默认设置的width,height值指的是content的宽高值。
+有两种盒子模型：标准盒子（width=content width），IE盒子(width=border width + padding width + content)。

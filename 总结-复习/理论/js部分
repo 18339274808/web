@@ -1,0 +1,159 @@
+1.什么是javascript?有哪些特点？
+javascript是一种编程语言，平时我们称脚本语言(vbscript,JScript,actionscript,typescript)，用来控制网页特效（比如：实时的内容更新，交互式的地图，2D/3D 动画，滚动播放的视频等等）。将来学习了node平台后，js还可以运行在服务器端。
+它的主要特点：
+1. JS是弱类型的语言。var a = 10; a="hello"; 类型可以随意转换。
+2. JS是解释性语言，不进行编译，一边解释一边执行。而c,c++,java,.net,php等编程语言是先编译再执行。
+3. JS是基于对象，而非纯面象对象的。
+4. JS是跨平台的，在多种操作系统下都可以顺利运行（比如：window,linux,ios,android等）
+......
+
+浏览器有两个主要的引擎：JS解析引擎，CSS渲染引擎。
+
+源码-》编译-》二进制字节码
+
+2.JS基本数据类型有哪些？number,string,boolean,null,undefined。
+
+3.JS的作用域有哪些？分别描述一下它们的特点？
+全局作用域（global域），局部作用域（function域，函数域），块级作用域（block域）
+全局作用域中定义的变量，可以在函数外使用，也可以在函数内使用。
+局部作用域中定义的变量，只能在函数内使用。
+块级作用域中定义的变量，只能在本块（即闭合的{}中）中使用。
+for(let i=0;i<3;i++){}
+
+{ let a = 10;}
+
+4.什么是JS语句？您目前接触到语句有哪些？
+JS语句，是编写业务逻辑代码的基本单元。一条语句以分号结束。JS中内置了一些语句，我们在使用时要遵守JS的语法。比如if语句,else语句,else if语句,switch语句,for语句，while语句,do...while...语句，return语句等。
+if(){}else if(){}else if(){}.....else{}
+for(var i = 0;i<10;i++){
+
+}
+
+while(i<10){
+
+    i++;
+}
+
+5.什么是JS数组？索引？
+数组是存储数据的集合，索引是找到数组中数据的“线索”，从0开始，到数组中的length-1结束。
+[1,2,3]
+
+
+continue继续。一般for,while语句中。
+
+“Uncaught SyntaxError: Illegal continue statement: no surrounding iteration statement”
+continue语句只在循环语句中有效。
+
+try尝试
+catch捕获，捕捉
+
+throw抛出异常。
+
+算术运算符：+,-,*./,%,++,--
+比较运算符：>,<,>=,<=,!=,==,===
+赋值运算符：=，+=,-=,*=,/=,%=
+逻辑运算符: &&与，||或，!非
+
+对象：对现实世界中事物的描述。有属性和行为组成。
+/***************Date日期对象**********************/
+Date日期对象:
+创建一个日期实例（个体）
+var date1 = new Date();
+var date2 = new Date(毫秒数);
+var date3 = new Date("日期格式的字符串");
+var date4 = new Date(year, month, date, hour, minute, second, milliSecond);
+
+实例方法：
+getXXX()
+setXXX(),特别注意一下，设置日期返回的毫秒。了解。
+
+静态方法：
+Date.parse(), Date.now()
+
+/********************Math对象***********************/
+Math数学对象，封装大量的和数学相应的函数，比如平方，立方，sin,cos,随机数。
+
+Math.PI=π≈3.14159
+
+Math.abs(-1) 求绝对值。
+
+Math.ceil(3.1) 其中ceil天花板，向上取整。
+Math.floor(3.9) 其中floor地板，向下取整。
+Math.max(n1,n2,n3,....)取所有中间的最大的。
+Math.min(n1,n2,n3,.....)取所有中间的最小的。
+
+Math.pow(5,3) 取任意数的任意方。
+Math.sqrt(4) 开平方
+Math.cbrt(2) 函数返回任意数字的立方根.
+
+Math.random() 返回[0，1)之间的小数。包含0，不包括1
+Math.round(3.45) 四舍五入。
+
+/***********************string字符串********************/
+ charAt(index) 根据索引取字符串中某个字符。
+ concat(str1,str2,........,strN) 把多个字符串连接合并成一个新的字符串。不影响原来的字符串。
+
+ startsWith("子字符串")
+  判断字符串是否以子字符串开头，是开头返回true，否则返回flase。
+ endWith("子字符串")
+   判断字符串是否以子字符串结尾，世界未返回true，否则返回false。
+
+  includes("子字符串") 
+    判断字符串是否包含子字符串。包含返回true，否则返回false。
+  indexOf("子字符串")
+     查找字符串中子字符串所在的索引，找到返回所在的索引，找不到返回-1。
+   lastIndexOf("子字符串")
+     查找字符串中子字符串所在的索引（倒着找），找到返回所在的索引，找不到返回  
+
+   padEnd(补充后的长度，"子字符串")  
+     在字符串后面补充几个字符串，已达到补充后的长度。
+   padStart(补充后的长度，"子字符串")  
+     在字符串前面补充几个字字符串，已达到补充后的长度。
+   repeat(几次) 重复显示几次字符串
+   replace("子字符串"，"新字符串")
+     把字符串中的子字符串，用心的字符串替换，替换一次。
+
+     toLowerCase() 把字符串转换成小写
+     toUpperCase() 把字符串转换成大写
+
+   trim()  去除字符串前后的空白
+   trimRight()  去除字符串右边（后面）的空白 
+
+   split("子字符串")  把字符串用子字符串分割成数组。
+   substring(indexStart, indexEnd) 截取字符串，从索引indexStart开始， 到indexEnd结束。
+   substr(indexStart, length) 截取字符串，从索引indexStart开始截取length长度的子字符串。
+   slice(start, end) 截取字符串，从索引indexStart开始，到indexEnd结束。能使用负值。
+
+   /*********************数组*******************/
+   什么是数组？
+     有顺序的数据集合。它可以存储单种数据类型，也可以存储多数据类型。数组中的每一项，称为元素。
+
+  实例方法：
+  添加：
+     push(ele1,ele2,.....,eleN)  从末尾添加多个元素。
+     unshift (ele1,ele2,.......,eleN) 从开始添加多个元素。
+     splice(startIndex,0,ele1,ele2,.....eleN) 从中间添加多个元素
+
+  删除：
+  pop() 从末尾删除一个元素。
+  shift() 从开始删除一个元素。
+  splice(startIndex, deleteCount) 从中间删除。 
+
+
+  修改：
+     splice(startIndex, deleteCount, newEle1, newEle2, ..., newEleN)把原来的旧值用新值替代。   
+    fill(新元素，start, end)用一个新元素把数组中从start开始到end结束之间的所有元素替换掉。
+
+    查询:
+    fitlter(function(value,index,arr){})
+    用来过滤/筛选/查询数组。产生一个新的数组，参数是回调函数，同forEach的用法。
+    slice(startIndex,endIndex)  用来接取数组。
+    find(function(value, index, arr){})用来查找元素，只会匹配满足条件的第一个元素。返回找到元素。找不到返回undefined。
+    findIndex(function(value, index, arr){})用来查找元素所对应的索引。只会匹配满足条件的第一个元素所对应的索引。找到返回对应的索引，找不到返回-1。
+    indexOf(element, startIndex)从某个索引开始查找元素所对应的索引。找到返回索引，找不到返回-1。注意和findIndex()的区别。
+    last​IndexOf(element, startIndex)用法同indexOf。只是从后面开始查找元素所对应的索引。
+    for​Each(function(v,i,a){})数组循环。也可以使用for语句循环数组。
+    concat(arr1,arr2,...arrN)把多个数组合并/拼接成一个新数组。不会影响原数组。
+
+
+
